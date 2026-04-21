@@ -1,0 +1,6 @@
+@MeterPulse.Api_HostAddress = http://localhost:5189
+
+GET {{MeterPulse.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

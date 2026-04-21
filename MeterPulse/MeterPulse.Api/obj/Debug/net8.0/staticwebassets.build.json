@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "p9yh1P4n+FJBVKjh9HOxgD+uPc46tEi1qAAKVwiCDo0=",
+  "Source": "MeterPulse.Api",
+  "BasePath": "_content/MeterPulse.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
