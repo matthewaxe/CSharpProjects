@@ -30,3 +30,4 @@
 /home/matthew/sync/obsidian/Notebooks/Computers/C# programming/CSharpProjects/MeterPulse/MeterPulse.Api/obj/Debug/net8.0/MeterPulse.Api.pdb
 /home/matthew/sync/obsidian/Notebooks/Computers/C# programming/CSharpProjects/MeterPulse/MeterPulse.Api/obj/Debug/net8.0/MeterPulse.Api.genruntimeconfig.cache
 /home/matthew/sync/obsidian/Notebooks/Computers/C# programming/CSharpProjects/MeterPulse/MeterPulse.Api/obj/Debug/net8.0/ref/MeterPulse.Api.dll
+/home/matthew/sync/obsidian/Notebooks/Computers/C# programming/CSharpProjects/MeterPulse/MeterPulse.Api/obj/Debug/net8.0/MeterPulse.Api.sourcelink.json

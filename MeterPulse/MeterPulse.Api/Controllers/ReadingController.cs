@@ -6,6 +6,12 @@ namespace MeterPulse.Api.Controllers;
 [Route("api/[controller]")]
 public class ReadingsController : ControllerBase
 {
+    private readonly IReadingService _readingService;
+
+    public ReadingsController(IReadingService readingService)
+    {
+        _readingService = readingService;
+    }
     [HttpPost]
     public IActionResult POST(CreateReadingDTO meterReading)
     {
