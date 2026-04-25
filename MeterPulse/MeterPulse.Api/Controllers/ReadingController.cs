@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MeterPulse.Api.DTOs;
+using MeterPulse.Api.Services;
 namespace MeterPulse.Api.Controllers;
 
 [ApiController]
@@ -15,6 +16,6 @@ public class ReadingsController : ControllerBase
     [HttpPost]
     public IActionResult POST(CreateReadingDTO meterReading)
     {
-        return Ok();
+        return _readingService.AddReading(meterReading);
     }
 }

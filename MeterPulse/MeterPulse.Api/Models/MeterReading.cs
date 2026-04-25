@@ -9,3 +9,4 @@ public class MeterReading
     public required DateTime Timestamp { get; set; }
 }
 
+ 
