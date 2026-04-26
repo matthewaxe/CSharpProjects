@@ -2,8 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using MeterPulse.Api.DTOs;
 using MeterPulse.Api.Data;
 using MeterPulse.Api.Models;
-using System.ComponentModel.DataAnnotations;
-using System.Net;
 namespace MeterPulse.Api.Services;
 
 public class ReadingService : IReadingService
@@ -17,7 +15,7 @@ public class ReadingService : IReadingService
     {
         MeterReading meterReading = new MeterReading
         {
-            Status = ReadingStatus.Valid,
+            Status = validRange(dto.Reading),
             Reading = dto.Reading,
             Unit = dto.Unit,
             MeterId = dto.MeterId,
@@ -27,6 +25,10 @@ public class ReadingService : IReadingService
         _meterPulseDbContext.Add(meterReading);
         _meterPulseDbContext.SaveChanges();
 
-        return new CreatedResult(null, null);
+        return new CreatedResult((string?)null, null);
+    }
+    private ReadingStatus validRange(double reading)
+    {
+        return (reading < 60 && reading > -70) ? ReadingStatus.Valid : ReadingStatus.Flagged;
     }
 }
