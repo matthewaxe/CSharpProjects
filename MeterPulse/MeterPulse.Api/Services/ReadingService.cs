@@ -30,6 +30,15 @@ public class ReadingService : IReadingService
 
         return new OkObjectResult(query.ToList());
     }
+
+    public IActionResult GetAnomalies()
+    {
+        var query = _meterPulseDbContext.MeterReadings.AsQueryable();
+
+        query = query.Where(r => r.Status == ReadingStatus.Flagged);
+
+        return new OkObjectResult(query.ToList());
+    }
     public IActionResult AddReading(CreateReadingDTO dto)
     {
         MeterReading meterReading = new MeterReading

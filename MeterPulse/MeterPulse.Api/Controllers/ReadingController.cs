@@ -24,4 +24,10 @@ public class ReadingsController : ControllerBase
     {
         return _readingService.Get(meterId, from, to);
     }
+
+    [HttpGet("anomalies")]
+    public IActionResult GetAnomalies()
+    {
+        return _readingService.GetAnomalies();
+    }
 }
