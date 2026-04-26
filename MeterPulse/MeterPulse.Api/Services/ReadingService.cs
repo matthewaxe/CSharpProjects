@@ -11,6 +11,25 @@ public class ReadingService : IReadingService
     {
         _meterPulseDbContext = meterPulseDbContext;
     }
+    public IActionResult Get(string? meterId, DateTime? from, DateTime? to)
+    {
+        var query = _meterPulseDbContext.MeterReadings.AsQueryable();
+        
+        if (meterId != null)
+        {
+            query = query.Where(r => r.MeterId == meterId);
+        }
+        if (from != null)
+        {
+            query = query.Where( r => r.Timestamp >= from);
+        }
+         if (to != null)
+        {
+            query = query.Where( r => r.Timestamp <= to);
+        }
+
+        return new OkObjectResult(query.ToList());
+    }
     public IActionResult AddReading(CreateReadingDTO dto)
     {
         MeterReading meterReading = new MeterReading
@@ -31,4 +50,5 @@ public class ReadingService : IReadingService
     {
         return (reading < 60 && reading > -70) ? ReadingStatus.Valid : ReadingStatus.Flagged;
     }
+
 }

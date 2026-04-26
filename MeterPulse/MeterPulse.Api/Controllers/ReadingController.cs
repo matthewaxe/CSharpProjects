@@ -18,4 +18,10 @@ public class ReadingsController : ControllerBase
     {
         return _readingService.AddReading(meterReading);
     }
+
+    [HttpGet]
+    public IActionResult Get([FromQuery]string? meterId, [FromQuery]DateTime? from, [FromQuery] DateTime? to)
+    {
+        return _readingService.Get(meterId, from, to);
+    }
 }
