@@ -18,6 +18,11 @@ public class MeterService : IMeterService
         var query = _meterPulseDbContext.MeterReadings.AsQueryable();
         query = query.Where(r => r.MeterId == meterId);
 
+        if (!query.Any())
+        {
+            return new NotFoundResult();
+        }
+
         double average = query.Average(r => r.Reading);
         double min = query.Min(r => r.Reading);
         double max = query.Max(r => r.Reading);
