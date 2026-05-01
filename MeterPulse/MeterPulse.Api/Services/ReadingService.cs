@@ -11,7 +11,7 @@ public class ReadingService : IReadingService
     {
         _meterPulseDbContext = meterPulseDbContext;
     }
-    public IActionResult Get(string? meterId, DateTime? from, DateTime? to)
+    public IActionResult Get(int? meterId, DateTime? from, DateTime? to)
     {
         var query = _meterPulseDbContext.MeterReadings.AsQueryable();
         

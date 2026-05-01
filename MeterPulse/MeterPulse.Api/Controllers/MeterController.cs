@@ -16,7 +16,7 @@ public class MeterController : ControllerBase
         _meterService = meterService;
     }
     [HttpGet("{meterId}/summary")]
-    public IActionResult GetSummary([FromRoute] string meterId)
+    public IActionResult GetSummary([FromRoute] int meterId)
     {
         return _meterService.GetSummary(meterId);
     }

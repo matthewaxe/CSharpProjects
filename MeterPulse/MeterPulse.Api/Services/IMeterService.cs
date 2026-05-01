@@ -3,6 +3,6 @@ namespace MeterPulse.Api.Services;
 
 public interface IMeterService
 {
-    IActionResult GetSummary(string meterId);
+    IActionResult GetSummary(int meterId);
 }
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeterPulse.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58b6b53f02ef08ab12647a99ed1ba8dd3cc55471")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72985d73142e4af3d8895dd30693280af104a613")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeterPulse.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeterPulse.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -13,7 +13,7 @@ public class MeterService : IMeterService
         _meterPulseDbContext = meterPulseDbContext; 
     }
     
-    public IActionResult GetSummary(string meterId)
+    public IActionResult GetSummary(int meterId)
     {
         var query = _meterPulseDbContext.MeterReadings.AsQueryable();
         query = query.Where(r => r.MeterId == meterId);

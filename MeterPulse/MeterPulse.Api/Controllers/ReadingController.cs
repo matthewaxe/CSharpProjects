@@ -20,7 +20,7 @@ public class ReadingsController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult Get([FromQuery]string? meterId, [FromQuery]DateTime? from, [FromQuery] DateTime? to)
+    public IActionResult Get([FromQuery]int? meterId, [FromQuery]DateTime? from, [FromQuery] DateTime? to)
     {
         return _readingService.Get(meterId, from, to);
     }
