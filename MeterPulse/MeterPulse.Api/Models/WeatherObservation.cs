@@ -16,4 +16,4 @@ public class WeatherObservation
     public double? Value { get; set; }
     public string? Source { get; set; }
     public string? RawData { get; set; }
-}
+} 

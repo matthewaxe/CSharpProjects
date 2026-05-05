@@ -6,7 +6,7 @@ public class Company
     public required string RegistrationNumber { get; set; }
     public required string Email { get; set; }
     public required decimal FinePerBreach { get; set; }
-    public required List<Meter> Meters { get; set; } = new();
+    public List<Meter> Meters { get; set; } = new();
 }
 
- 
+  

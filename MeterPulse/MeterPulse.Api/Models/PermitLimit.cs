@@ -12,4 +12,4 @@ public class PermitLimit
     public decimal? FineOverride { get; set; }
     //naigation property
     public Meter? Meter { get; set; }
-}
+}  

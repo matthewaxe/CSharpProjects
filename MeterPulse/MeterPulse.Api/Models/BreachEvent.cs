@@ -3,6 +3,7 @@ namespace MeterPulse.Api.Models;
 public class BreachEvent
 {
     public int Id { get; set; }
+    public BreachEventStatus Status { get; set; }
     public int MeterId { get; set; }
     public int? PermitLimitId { get; set; }
     public required string Parameter { get; set; }

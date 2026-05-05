@@ -30,4 +30,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+SeedData.Initialise(app.Services);
+
 app.Run();
