@@ -1,7 +1,7 @@
 namespace MeterPulse.Api.Models;
 
 public class WeatherObservation
-{
+{ 
     public int Id { get; set; }
     public DateTime Timestamp { get; set; }
     public string? StationReference { get; set; }

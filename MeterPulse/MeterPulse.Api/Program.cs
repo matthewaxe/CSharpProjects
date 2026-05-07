@@ -10,6 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IReadingService, ReadingService>();
 builder.Services.AddScoped<IMeterService, MeterService>();
 builder.Services.AddHostedService<ReadingBackgroundService>();
+builder.Services.AddHostedService<WeatherIngestionService>();
+builder.Services.AddHttpClient();
 builder.Services.AddDbContext<MeterPulseDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

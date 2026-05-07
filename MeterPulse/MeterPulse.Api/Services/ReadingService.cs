@@ -39,7 +39,7 @@ public class ReadingService : IReadingService
 
         return new OkObjectResult(query.ToList());
     }
-    public IActionResult AddReading(CreateReadingDTO dto)
+    public IActionResult AddReading(CreateReadingDTO dto) 
     {
         MeterReading meterReading = new MeterReading
         {
